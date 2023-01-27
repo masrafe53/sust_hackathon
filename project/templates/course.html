@@ -1,0 +1,15 @@
+{% load static %}
+<h1>Course List</h1>
+<div class="mas">
+    <img src="{% static 'admin/img/man.png' %}">
+</div>
+
+{% for i in my_course %}
+<form action=""></form>
+<h1>{{ i.title }}</h1>
+<p>{{ i.details }}</p>
+<h3>{{ i.cost }}</h3>
+<h3>{{ i.offered_by }}</h3>
+<img width="100px" src="{{ i.course_pic.url }}">
+<button type="submit" value="Submit" name="Submit">Submit</button>
+{% endfor %}
